@@ -22,7 +22,7 @@ public class StudentImplDAO implements StudentDAO {
 		this.DBUtil = dataSource;
 	}
 	
-	@Override
+	//@Override
 	public void addStudent(Student student) throws Exception{
 		Connection conn=DBUtil.getConnection(); 
 		String sql = ""+
@@ -48,12 +48,12 @@ public class StudentImplDAO implements StudentDAO {
 		ptmt.execute();
 		
 	}
-	@Override
+	//@Override
 	public void updateStudent(Student student) throws Exception{
 		Connection conn=DBUtil.getConnection(); 
 		String sql = ""+
 					"update student "+
-					"set name=?,qq=?,type=?,enterDate=?,school=?,stId=?,link=?,word=?,TA=?,source=?,update_at=?,create_at=?) "+
+					"set name=?,qq=?,type=?,enterDate=?,school=?,stId=?,link=?,word=?,TA=?,source=?,update_at=?,create_at=? "+
 					"where id=?";
 		PreparedStatement ptmt = conn.prepareStatement(sql);
 		
@@ -72,7 +72,7 @@ public class StudentImplDAO implements StudentDAO {
 		ptmt.setLong(12, student.getCreate_at());
 		ptmt.execute();
 	}
-	@Override
+	//@Override
 	public void delStudent(Long id) throws Exception{
 		Connection conn=DBUtil.getConnection(); 
 		String sql = ""+
@@ -83,7 +83,7 @@ public class StudentImplDAO implements StudentDAO {
 		ptmt.execute();
 		
 	}
-	@Override
+	//@Override
 	public Student get(Long id) throws Exception{
 		Connection conn=DBUtil.getConnection(); 
 		String sql = ""+
@@ -111,7 +111,7 @@ public class StudentImplDAO implements StudentDAO {
 		}
 		return student;
 	}
-	@Override
+	//@Override
 	public List<Student> query() throws Exception{
 		Connection conn=DBUtil.getConnection(); 
 		String sql = ""+

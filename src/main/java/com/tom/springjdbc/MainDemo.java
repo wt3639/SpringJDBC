@@ -1,5 +1,8 @@
 package com.tom.springjdbc;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,10 +22,19 @@ public class MainDemo {
 				    student.setName("jack");
 				    student.setSchool("qinghua");
 				    studentDAO.addStudent(student);
+				    Student student2 = new Student();
+				    student2.setId(5L);
+				    student2.setName("Qiqi");
+				    studentDAO.updateStudent(student2);
 				    studentDAO.delStudent(11L);
 				    Student student1 = studentDAO.get(1L);
 				    System.out.println(student1);
-				
+				    List<Student> lS = null;
+				    lS = studentDAO.query();
+				    Iterator iter = lS.iterator();
+				    while(iter.hasNext()){
+				    	System.out.println(iter.next());
+				    }
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
