@@ -5,8 +5,8 @@
 
    <!-- Using mysql datasource -->
    <import resource="database/spring-datasource-sqlserver.xml" />
-   <import resource="dao/spring-student.xml" />
-   
+  <!--   <import resource="dao/spring-student.xml" />-->
+   <import resource="spring-mybatis.xml" />
  
    
    
