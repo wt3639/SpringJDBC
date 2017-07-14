@@ -45,7 +45,7 @@ public class StudentImplDAO extends JdbcDaoSupport implements StudentDAO {
 			});
 		
 		/*
-		 * 2.使用jdbctemplate 没有继承jdbcdaosupport
+		 * 2.use jdbctemplate do not extends jdbcdaosupport
 		jdbcTemplate = new JdbcTemplate(dataSource);
 		jdbcTemplate.update(sql, new Object[] { student.getId(),
 				student.getName(),student.getQq(),student.getType(),student.getEnterDate(),
@@ -54,7 +54,7 @@ public class StudentImplDAO extends JdbcDaoSupport implements StudentDAO {
 			});
 		*/
 		/*
-		 * 1.不使用jdbctemplate
+		 * 1.do not use jdbctemplate
 		 * 
 		Connection conn=dataSource.getConnection(); 
 		PreparedStatement ptmt = conn.prepareStatement(sql);

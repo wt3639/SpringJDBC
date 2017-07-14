@@ -27,12 +27,15 @@ public class MainDemo {
 		SqlSession session = sqlSessionFactory.openSession();
 		*/
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-module.xml");				 
-		StudentDAO studentDAO = (StudentDAO) context.getBean("studentDAO");
+		//StudentDAO studentDAO = (StudentDAO) context.getBean("studentDAO");
+		SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
+		SqlSession session = sqlSessionFactory.openSession();
 		try {
-			//StudentDAO studentDAO = session.getMapper(StudentDAO.class);
+			StudentDAO studentDAO = session.getMapper(StudentDAO.class);
 			Student student1 = studentDAO.get(1L);
 			System.out.println(student1); 
 			Student student = new Student();
+			//student.setId(15L);
 			student.setName("lianlian");
 			student.setSchool("xiada");
 			studentDAO.addStudent(student);
@@ -67,12 +70,12 @@ public class MainDemo {
 			 * 
 			 * }
 			 */
-			//session.commit();
+			session.commit();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			//session.close();
+			session.close();
 		}
 
 		/*

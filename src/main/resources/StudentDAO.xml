@@ -14,8 +14,8 @@
 </select>
   
   <insert id="addStudent" parameterType="com.tom.springjdbc.bean.Student">
-  insert into student (id,name,qq,type,enterDate,school,stId,link,word,TA,source,update_at,create_at) 
-  values(#{id},#{name},#{qq},#{type},#{enterDate},#{school},#{stId},#{link},
+  insert into student (name,qq,type,enterDate,school,stId,link,word,TA,source,update_at,create_at) 
+  values(#{name},#{qq},#{type},#{enterDate},#{school},#{stId},#{link},
   #{word},#{tA},#{source},#{update_at},#{create_at})
 </insert>
 
