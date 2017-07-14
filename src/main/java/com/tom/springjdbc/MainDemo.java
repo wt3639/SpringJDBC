@@ -45,6 +45,7 @@ public class MainDemo {
 				    	System.out.println(iter.next());
 				    	
 				    }
+				    session.commit();
 		    	} finally {
 		    	  session.close();
 		    	}
