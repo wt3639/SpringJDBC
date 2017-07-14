@@ -19,14 +19,14 @@ public class MainDemo {
 					 
 				    StudentDAO studentDAO = (StudentDAO) context.getBean("studentDAO");
 				    Student student = new Student();
-				    student.setName("jack");
-				    student.setSchool("qinghua");
+				    student.setName("lucy");
+				    student.setSchool("beida");
 				    studentDAO.addStudent(student);
 				    Student student2 = new Student();
 				    student2.setId(5L);
-				    student2.setName("Qiqi");
+				    student2.setName("Qi");
 				    studentDAO.updateStudent(student2);
-				    studentDAO.delStudent(11L);
+				    studentDAO.delStudent(23L);
 				    Student student1 = studentDAO.get(1L);
 				    System.out.println(student1);
 				    List<Student> lS = null;
