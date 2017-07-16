@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="4" failures="1" name="com.tom.springjdbctest.StudentDAOTest" time="3.334" errors="2" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
+    <property name="java.vm.version" value="25.73-b02"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\tom\Documents\GitHub\SpringJDBC"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\tom\Documents\GitHub\SpringJDBC"/>
+    <property name="java.runtime.version" value="1.8.0_73-b02"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\tom\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\tom\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5026877557760517230.tmp"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_73/bin/server;C:/Program Files/Java/jre1.8.0_73/bin;C:/Program Files/Java/jre1.8.0_73/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SDKs\TypeScript\1.0\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\tom\Documents\opencv\opencv\build\x86\vc12\bin;C:\Users\tom\Documents\opencv\opencv\build\x64\vc12\bin;C:\Users\tom\Documents\sdk\tools;C:\Users\tom\Documents\sdk\platform-tools;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\tom\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\Users\tom\AppData\Local\Microsoft\WindowsApps;;C:\Users\tom\Desktop;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\tom\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\lib\jansi-native\windows64"/>
+    <property name="user.home" value="C:\Users\tom"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="tom"/>
+    <property name="java.class.path" value="C:\Users\tom\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_73"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_73\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\tom\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.tom.springjdbctest.StudentDAOTest" name="testAdd" time="3.195">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.tom.springjdbctest.StudentDAOTest.testAdd(StudentDAOTest.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>[DEBUG] 2017-07-16 13:14:07,946 method:org.springframework.test.context.junit4.SpringJUnit4ClassRunner.&lt;init&gt;(SpringJUnit4ClassRunner.java:106)
+SpringJUnit4ClassRunner constructor called with [class com.tom.springjdbctest.StudentDAOTest].
+[DEBUG] 2017-07-16 13:14:08,024 method:org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateProcessing(AbstractDelegatingSmartContextLoader.java:89)
+Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@62043840 declaringClass = &apos;com.tom.springjdbctest.StudentDAOTest&apos;, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, inheritLocations = true, initializers = &apos;{}&apos;, inheritInitializers = true, name = [null], contextLoaderClass = &apos;org.springframework.test.context.ContextLoader&apos;].
+[DEBUG] 2017-07-16 13:14:08,028 method:org.springframework.test.context.ContextLoaderUtils.resolveActiveProfiles(ContextLoaderUtils.java:471)
+Could not find an &apos;annotation declaring class&apos; for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,063 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:68)
+Retrieved @ProfileValueSourceConfiguration [null] for test class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,064 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:80)
+Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,066 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:68)
+Retrieved @ProfileValueSourceConfiguration [null] for test class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,067 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:80)
+Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,072 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:68)
+Retrieved @ProfileValueSourceConfiguration [null] for test class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,072 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:80)
+Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:08,076 method:org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:73)
+Performing dependency injection for test context [[TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@32e6e9c3, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]].
+[DEBUG] 2017-07-16 13:14:08,078 method:org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:98)
+Delegating to GenericXmlContextLoader to load context from [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]].
+[DEBUG] 2017-07-16 13:14:08,079 method:org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:104)
+Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:08,285 method:org.springframework.core.env.MutablePropertySources.addLast(MutablePropertySources.java:109)
+Adding [systemProperties] PropertySource with lowest search precedence
+[DEBUG] 2017-07-16 13:14:08,288 method:org.springframework.core.env.MutablePropertySources.addLast(MutablePropertySources.java:109)
+Adding [systemEnvironment] PropertySource with lowest search precedence
+[DEBUG] 2017-07-16 13:14:08,289 method:org.springframework.core.env.AbstractEnvironment.&lt;init&gt;(AbstractEnvironment.java:126)
+Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+[INFO ] 2017-07-16 13:14:08,310 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring-module.xml]
+[DEBUG] 2017-07-16 13:14:08,364 method:org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:73)
+Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+[DEBUG] 2017-07-16 13:14:08,454 method:org.springframework.beans.factory.xml.PluggableSchemaResolver.getSchemaMappings(PluggableSchemaResolver.java:141)
+Loading schema mappings from [META-INF/spring.schemas]
+[DEBUG] 2017-07-16 13:14:08,465 method:org.springframework.beans.factory.xml.PluggableSchemaResolver.getSchemaMappings(PluggableSchemaResolver.java:147)
+Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop-4.1.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd=org/springframework/jdbc/config/spring-jdbc-4.1.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-4.1.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.1.xsd}
+[DEBUG] 2017-07-16 13:14:08,492 method:org.springframework.beans.factory.xml.PluggableSchemaResolver.resolveEntity(PluggableSchemaResolver.java:119)
+Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-4.1.xsd
+[DEBUG] 2017-07-16 13:14:08,563 method:org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:98)
+Loading bean definitions
+[INFO ] 2017-07-16 13:14:08,588 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [database/spring-datasource-sqlserver.xml]
+[DEBUG] 2017-07-16 13:14:08,590 method:org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:73)
+Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+[DEBUG] 2017-07-16 13:14:08,593 method:org.springframework.beans.factory.xml.PluggableSchemaResolver.resolveEntity(PluggableSchemaResolver.java:119)
+Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-4.1.xsd
+[DEBUG] 2017-07-16 13:14:08,625 method:org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:98)
+Loading bean definitions
+[DEBUG] 2017-07-16 13:14:08,638 method:org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:254)
+Imported 1 bean definitions from relative location [database/spring-datasource-sqlserver.xml]
+[INFO ] 2017-07-16 13:14:08,640 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[DEBUG] 2017-07-16 13:14:08,643 method:org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:73)
+Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+[DEBUG] 2017-07-16 13:14:08,659 method:org.springframework.beans.factory.xml.PluggableSchemaResolver.resolveEntity(PluggableSchemaResolver.java:119)
+Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.0.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+[DEBUG] 2017-07-16 13:14:08,701 method:org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:98)
+Loading bean definitions
+[DEBUG] 2017-07-16 13:14:08,705 method:org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseBeanDefinitionElement(BeanDefinitionParserDelegate.java:495)
+Neither XML &apos;id&apos; nor &apos;name&apos; specified - using generated bean name [org.mybatis.spring.mapper.MapperScannerConfigurer#0]
+[DEBUG] 2017-07-16 13:14:08,706 method:org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:254)
+Imported 3 bean definitions from relative location [spring-mybatis.xml]
+[DEBUG] 2017-07-16 13:14:08,706 method:org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:224)
+Loaded 4 bean definitions from location pattern [classpath:spring-module.xml]
+[INFO ] 2017-07-16 13:14:08,736 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@2a5ca609: startup date [Sun Jul 16 13:14:08 CST 2017]; root of context hierarchy
+[DEBUG] 2017-07-16 13:14:08,737 method:org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:540)
+Bean factory for org.springframework.context.support.GenericApplicationContext@2a5ca609: org.springframework.beans.factory.support.DefaultListableBeanFactory@319b92f3: defining beans [dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor]; root of factory hierarchy
+[DEBUG] 2017-07-16 13:14:08,773 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:08,775 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:08,814 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:08,818 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:08,881 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+[DEBUG] 2017-07-16 13:14:08,882 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+[DEBUG] 2017-07-16 13:14:08,883 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:08,968 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1608)
+Invoking afterPropertiesSet() on bean with name &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+[DEBUG] 2017-07-16 13:14:08,969 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+[DEBUG] 2017-07-16 13:14:08,979 method:org.springframework.core.env.MutablePropertySources.addLast(MutablePropertySources.java:109)
+Adding [systemProperties] PropertySource with lowest search precedence
+[DEBUG] 2017-07-16 13:14:08,981 method:org.springframework.core.env.MutablePropertySources.addLast(MutablePropertySources.java:109)
+Adding [systemEnvironment] PropertySource with lowest search precedence
+[DEBUG] 2017-07-16 13:14:08,982 method:org.springframework.core.env.AbstractEnvironment.&lt;init&gt;(AbstractEnvironment.java:126)
+Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+[DEBUG] 2017-07-16 13:14:08,991 method:org.springframework.core.io.support.PathMatchingResourcePatternResolver.doFindMatchingFileSystemResources(PathMatchingResourcePatternResolver.java:622)
+Looking for matching resources in directory tree [C:\Users\tom\Documents\GitHub\SpringJDBC\target\classes\com\tom\springjdbc\dao]
+[DEBUG] 2017-07-16 13:14:08,992 method:org.springframework.core.io.support.PathMatchingResourcePatternResolver.doRetrieveMatchingFiles(PathMatchingResourcePatternResolver.java:684)
+Searching directory [C:\Users\tom\Documents\GitHub\SpringJDBC\target\classes\com\tom\springjdbc\dao] for files matching pattern [C:/Users/tom/Documents/GitHub/SpringJDBC/target/classes/com/tom/springjdbc/dao/**/*.class]
+[DEBUG] 2017-07-16 13:14:08,999 method:org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:423)
+Resolved location pattern [classpath*:com/tom/springjdbc/dao/**/*.class] to resources [file [C:\Users\tom\Documents\GitHub\SpringJDBC\target\classes\com\tom\springjdbc\dao\StudentDAO.class]]
+[DEBUG] 2017-07-16 13:14:09,014 method:org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:286)
+Identified candidate component class: file [C:\Users\tom\Documents\GitHub\SpringJDBC\target\classes\com\tom\springjdbc\dao\StudentDAO.class]
+[DEBUG] 2017-07-16 13:14:09,020 method:org.mybatis.spring.mapper.ClassPathMapperScanner.processBeanDefinitions(ClassPathMapperScanner.java:180)
+Creating MapperFactoryBean with name &apos;studentDAO&apos; and &apos;com.tom.springjdbc.dao.StudentDAO&apos; mapperInterface
+[DEBUG] 2017-07-16 13:14:09,029 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,029 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,031 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,032 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,032 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,033 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,034 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,038 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,038 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,039 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,063 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,063 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,064 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,065 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,065 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,066 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,067 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,067 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,068 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,069 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,074 method:org.springframework.context.support.AbstractApplicationContext.initMessageSource(AbstractApplicationContext.java:646)
+Unable to locate MessageSource with name &apos;messageSource&apos;: using default [org.springframework.context.support.DelegatingMessageSource@78e94dcf]
+[DEBUG] 2017-07-16 13:14:09,078 method:org.springframework.context.support.AbstractApplicationContext.initApplicationEventMulticaster(AbstractApplicationContext.java:670)
+Unable to locate ApplicationEventMulticaster with name &apos;applicationEventMulticaster&apos;: using default [org.springframework.context.event.SimpleApplicationEventMulticaster@3b07a0d6]
+[DEBUG] 2017-07-16 13:14:09,082 method:org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:731)
+Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@319b92f3: defining beans [dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,studentDAO]; root of factory hierarchy
+[DEBUG] 2017-07-16 13:14:09,082 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,083 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,092 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;dataSource&apos; to allow for resolving potential circular references
+[INFO ] 2017-07-16 13:14:09,132 method:org.springframework.jdbc.datasource.DriverManagerDataSource.setDriverClassName(DriverManagerDataSource.java:133)
+Loaded JDBC driver: net.sourceforge.jtds.jdbc.Driver
+[DEBUG] 2017-07-16 13:14:09,134 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,135 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;sqlSessionFactory&apos;
+[DEBUG] 2017-07-16 13:14:09,135 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;sqlSessionFactory&apos;
+[DEBUG] 2017-07-16 13:14:09,160 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Logging initialized using &apos;class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl&apos; adapter.
+[DEBUG] 2017-07-16 13:14:09,167 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;sqlSessionFactory&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,201 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,210 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1608)
+Invoking afterPropertiesSet() on bean with name &apos;sqlSessionFactory&apos;
+[DEBUG] 2017-07-16 13:14:09,212 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Property &apos;configuration&apos; or &apos;configLocation&apos; not specified, using default MyBatis Configuration
+[DEBUG] 2017-07-16 13:14:09,571 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Parsed mapper file: &apos;class path resource [StudentDAO.xml]&apos;
+[DEBUG] 2017-07-16 13:14:09,574 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;sqlSessionFactory&apos;
+[DEBUG] 2017-07-16 13:14:09,575 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.mybatis.spring.mapper.MapperScannerConfigurer#0&apos;
+[DEBUG] 2017-07-16 13:14:09,576 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:09,576 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:09,593 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;transactionManager&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,600 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,601 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1608)
+Invoking afterPropertiesSet() on bean with name &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:09,602 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:09,602 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalConfigurationAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,603 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalAutowiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,603 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalRequiredAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,604 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.springframework.context.annotation.internalCommonAnnotationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,604 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,605 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,607 method:org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:221)
+Creating shared instance of singleton bean &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:09,609 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:450)
+Creating instance of bean &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:09,625 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:523)
+Eagerly caching bean &apos;studentDAO&apos; to allow for resolving potential circular references
+[DEBUG] 2017-07-16 13:14:09,638 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+[DEBUG] 2017-07-16 13:14:09,653 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1608)
+Invoking afterPropertiesSet() on bean with name &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:09,654 method:org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:478)
+Finished creating instance of bean &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:09,661 method:org.springframework.context.support.AbstractApplicationContext.initLifecycleProcessor(AbstractApplicationContext.java:697)
+Unable to locate LifecycleProcessor with name &apos;lifecycleProcessor&apos;: using default [org.springframework.context.support.DefaultLifecycleProcessor@6aaceffd]
+[DEBUG] 2017-07-16 13:14:09,662 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;lifecycleProcessor&apos;
+[DEBUG] 2017-07-16 13:14:09,668 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;sqlSessionFactory&apos;
+[DEBUG] 2017-07-16 13:14:09,671 method:org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:81)
+Searching for key &apos;spring.liveBeansView.mbeanDomain&apos; in [systemProperties]
+[DEBUG] 2017-07-16 13:14:09,673 method:org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:81)
+Searching for key &apos;spring.liveBeansView.mbeanDomain&apos; in [systemEnvironment]
+[DEBUG] 2017-07-16 13:14:09,674 method:org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:103)
+Could not find key &apos;spring.liveBeansView.mbeanDomain&apos; in any property source. Returning [null]
+[DEBUG] 2017-07-16 13:14:09,678 method:org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:93)
+Storing ApplicationContext in cache under key [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:09,690 method:org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:86)
+Processing injected element of bean &apos;com.tom.springjdbctest.StudentDAOTest&apos;: AutowiredMethodElement for public void org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests.setDataSource(javax.sql.DataSource)
+[DEBUG] 2017-07-16 13:14:09,697 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,698 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.registerDependentBeans(AutowiredAnnotationBeanPostProcessor.java:480)
+Autowiring by type from bean name &apos;com.tom.springjdbctest.StudentDAOTest&apos; to bean named &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:09,713 method:org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:86)
+Processing injected element of bean &apos;com.tom.springjdbctest.StudentDAOTest&apos;: AutowiredFieldElement for private com.tom.springjdbc.dao.StudentDAO com.tom.springjdbctest.StudentDAOTest.studentDAO
+[DEBUG] 2017-07-16 13:14:09,715 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:09,718 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.registerDependentBeans(AutowiredAnnotationBeanPostProcessor.java:480)
+Autowiring by type from bean name &apos;com.tom.springjdbctest.StudentDAOTest&apos; to bean named &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:09,726 method:org.springframework.transaction.interceptor.AbstractFallbackTransactionAttributeSource.getTransactionAttribute(AbstractFallbackTransactionAttributeSource.java:108)
+Adding transactional method &apos;StudentDAOTest.testAdd&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+[DEBUG] 2017-07-16 13:14:09,728 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:162)
+Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@32e6e9c3, testMethod = testAdd@StudentDAOTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:09,729 method:org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:104)
+Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:09,730 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.retrieveConfigurationAttributes(TransactionalTestExecutionListener.java:538)
+Retrieved @TransactionConfiguration [@org.springframework.test.context.transaction.TransactionConfiguration(defaultRollback=true, transactionManager=transactionManager)] for test class [class com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:09,731 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.retrieveConfigurationAttributes(TransactionalTestExecutionListener.java:555)
+Retrieved TransactionConfigurationAttributes [TransactionConfigurationAttributes@5f16132a transactionManagerName = &apos;transactionManager&apos;, defaultRollback = true] for class [class com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:09,732 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:09,742 method:org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:367)
+Creating new transaction with name [testAdd]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+[DEBUG] 2017-07-16 13:14:09,746 method:org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:142)
+Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/java]
+[DEBUG] 2017-07-16 13:14:10,938 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:206)
+Acquired Connection [com.mysql.jdbc.JDBC4Connection@6da21078] for JDBC transaction
+[DEBUG] 2017-07-16 13:14:10,944 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:223)
+Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@6da21078] to manual commit
+[DEBUG] 2017-07-16 13:14:10,946 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.isRollback(TransactionalTestExecutionListener.java:427)
+No method-level @Rollback override: using default rollback [true] for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@32e6e9c3, testMethod = testAdd@StudentDAOTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[INFO ] 2017-07-16 13:14:10,947 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:279)
+Began transaction (1): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@614ca7df]; rollback [true]
+[DEBUG] 2017-07-16 13:14:10,956 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Creating a new SqlSession
+[DEBUG] 2017-07-16 13:14:10,975 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ea41516]
+[DEBUG] 2017-07-16 13:14:10,990 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+JDBC Connection [com.mysql.jdbc.JDBC4Connection@6da21078] will be managed by Spring
+[DEBUG] 2017-07-16 13:14:11,007 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt;  Preparing: insert into student (name,qq,type,enterDate,school,stId,link,word,TA,source,update_at,create_at) values(?,?,?,?,?,?,?, ?,?,?,?,?) 
+[DEBUG] 2017-07-16 13:14:11,062 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt; Parameters: lianlian(String), null, null, null, xiada(String), null, null, null, null, null, 0(Long), 0(Long)
+[DEBUG] 2017-07-16 13:14:11,171 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+&lt;==    Updates: 1
+[DEBUG] 2017-07-16 13:14:11,172 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ea41516]
+[DEBUG] 2017-07-16 13:14:11,172 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ea41516] from current transaction
+[DEBUG] 2017-07-16 13:14:11,176 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt;  Preparing: select * from student where id = ? 
+[DEBUG] 2017-07-16 13:14:11,177 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt; Parameters: 43(Long)
+[DEBUG] 2017-07-16 13:14:11,203 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+&lt;==      Total: 0
+[DEBUG] 2017-07-16 13:14:11,204 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ea41516]
+[DEBUG] 2017-07-16 13:14:11,205 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.isRollback(TransactionalTestExecutionListener.java:427)
+No method-level @Rollback override: using default rollback [true] for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@32e6e9c3, testMethod = testAdd@StudentDAOTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,206 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ea41516]
+[DEBUG] 2017-07-16 13:14:11,208 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ea41516]
+[DEBUG] 2017-07-16 13:14:11,209 method:org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:847)
+Initiating transaction rollback
+[DEBUG] 2017-07-16 13:14:11,209 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:284)
+Rolling back JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@6da21078]
+[DEBUG] 2017-07-16 13:14:11,247 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doCleanupAfterCompletion(DataSourceTransactionManager.java:327)
+Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6da21078] after transaction
+[DEBUG] 2017-07-16 13:14:11,247 method:org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection(DataSourceUtils.java:327)
+Returning JDBC Connection to DataSource
+[INFO ] 2017-07-16 13:14:11,252 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:299)
+Rolled back transaction after test execution for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@32e6e9c3, testMethod = testAdd@StudentDAOTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,254 method:org.springframework.test.context.support.DirtiesContextTestExecutionListener.afterTestMethod(DirtiesContextTestExecutionListener.java:107)
+After test method: context [[TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@32e6e9c3, testMethod = testAdd@StudentDAOTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+</system-out>
+  </testcase>
+  <testcase classname="com.tom.springjdbctest.StudentDAOTest" name="testDelete" time="0.037"/>
+  <testcase classname="com.tom.springjdbctest.StudentDAOTest" name="testUpdate" time="0.039">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.tom.springjdbctest.StudentDAOTest.testUpdate(StudentDAOTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-out>[DEBUG] 2017-07-16 13:14:11,301 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:68)
+Retrieved @ProfileValueSourceConfiguration [null] for test class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:11,301 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:80)
+Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:11,302 method:org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:73)
+Performing dependency injection for test context [[TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@45099dd3, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]].
+[DEBUG] 2017-07-16 13:14:11,303 method:org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:104)
+Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:11,303 method:org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:86)
+Processing injected element of bean &apos;com.tom.springjdbctest.StudentDAOTest&apos;: AutowiredMethodElement for public void org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests.setDataSource(javax.sql.DataSource)
+[DEBUG] 2017-07-16 13:14:11,304 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:11,304 method:org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:86)
+Processing injected element of bean &apos;com.tom.springjdbctest.StudentDAOTest&apos;: AutowiredFieldElement for private com.tom.springjdbc.dao.StudentDAO com.tom.springjdbctest.StudentDAOTest.studentDAO
+[DEBUG] 2017-07-16 13:14:11,304 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:11,306 method:org.springframework.transaction.interceptor.AbstractFallbackTransactionAttributeSource.getTransactionAttribute(AbstractFallbackTransactionAttributeSource.java:108)
+Adding transactional method &apos;StudentDAOTest.testUpdate&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+[DEBUG] 2017-07-16 13:14:11,306 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:162)
+Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@45099dd3, testMethod = testUpdate@StudentDAOTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,307 method:org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:104)
+Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:11,307 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:11,308 method:org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:367)
+Creating new transaction with name [testUpdate]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+[DEBUG] 2017-07-16 13:14:11,308 method:org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:142)
+Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/java]
+[DEBUG] 2017-07-16 13:14:11,322 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:206)
+Acquired Connection [com.mysql.jdbc.JDBC4Connection@20140db9] for JDBC transaction
+[DEBUG] 2017-07-16 13:14:11,322 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:223)
+Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@20140db9] to manual commit
+[DEBUG] 2017-07-16 13:14:11,323 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.isRollback(TransactionalTestExecutionListener.java:427)
+No method-level @Rollback override: using default rollback [true] for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@45099dd3, testMethod = testUpdate@StudentDAOTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[INFO ] 2017-07-16 13:14:11,324 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:279)
+Began transaction (3): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@614ca7df]; rollback [true]
+[DEBUG] 2017-07-16 13:14:11,324 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Creating a new SqlSession
+[DEBUG] 2017-07-16 13:14:11,325 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6a3214]
+[DEBUG] 2017-07-16 13:14:11,325 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+JDBC Connection [com.mysql.jdbc.JDBC4Connection@20140db9] will be managed by Spring
+[DEBUG] 2017-07-16 13:14:11,326 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt;  Preparing: update student set name=?, qq=?, type=?, enterDate=?, school=?, stId=?, link=?, word=?, TA=?, source=?, update_at=?, create_at=? where id = ? 
+[DEBUG] 2017-07-16 13:14:11,328 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt; Parameters: Wo(String), null, null, null, null, null, null, null, null, null, 0(Long), 0(Long), 6(Long)
+[DEBUG] 2017-07-16 13:14:11,334 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+&lt;==    Updates: 0
+[DEBUG] 2017-07-16 13:14:11,334 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6a3214]
+[DEBUG] 2017-07-16 13:14:11,335 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6a3214] from current transaction
+[DEBUG] 2017-07-16 13:14:11,335 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt;  Preparing: select * from student where id = ? 
+[DEBUG] 2017-07-16 13:14:11,336 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt; Parameters: 6(Long)
+[DEBUG] 2017-07-16 13:14:11,338 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+&lt;==      Total: 0
+[DEBUG] 2017-07-16 13:14:11,339 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6a3214]
+[DEBUG] 2017-07-16 13:14:11,339 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.isRollback(TransactionalTestExecutionListener.java:427)
+No method-level @Rollback override: using default rollback [true] for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@45099dd3, testMethod = testUpdate@StudentDAOTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,340 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6a3214]
+[DEBUG] 2017-07-16 13:14:11,340 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1e6a3214]
+[DEBUG] 2017-07-16 13:14:11,340 method:org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:847)
+Initiating transaction rollback
+[DEBUG] 2017-07-16 13:14:11,340 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:284)
+Rolling back JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@20140db9]
+[DEBUG] 2017-07-16 13:14:11,342 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doCleanupAfterCompletion(DataSourceTransactionManager.java:327)
+Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@20140db9] after transaction
+[DEBUG] 2017-07-16 13:14:11,342 method:org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection(DataSourceUtils.java:327)
+Returning JDBC Connection to DataSource
+[INFO ] 2017-07-16 13:14:11,343 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:299)
+Rolled back transaction after test execution for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@45099dd3, testMethod = testUpdate@StudentDAOTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,344 method:org.springframework.test.context.support.DirtiesContextTestExecutionListener.afterTestMethod(DirtiesContextTestExecutionListener.java:107)
+After test method: context [[TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@45099dd3, testMethod = testUpdate@StudentDAOTest, testException = java.lang.NullPointerException, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+</system-out>
+  </testcase>
+  <testcase classname="com.tom.springjdbctest.StudentDAOTest" name="testGet" time="0.063">
+    <failure message="expected:&lt;id:1 name:[刘佳义 school:河北科技大学 qq:1060015371]&gt; but was:&lt;id:1 name:[lian school:xiada qq:null]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;id:1 name:[刘佳义 school:河北科技大学 qq:1060015371]&gt; but was:&lt;id:1 name:[lian school:xiada qq:null]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at com.tom.springjdbctest.StudentDAOTest.testGet(StudentDAOTest.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:292)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-out>[DEBUG] 2017-07-16 13:14:11,345 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:68)
+Retrieved @ProfileValueSourceConfiguration [null] for test class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:11,345 method:org.springframework.test.annotation.ProfileValueUtils.retrieveProfileValueSource(ProfileValueUtils.java:80)
+Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.tom.springjdbctest.StudentDAOTest]
+[DEBUG] 2017-07-16 13:14:11,346 method:org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:73)
+Performing dependency injection for test context [[TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@750e2b97, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]].
+[DEBUG] 2017-07-16 13:14:11,347 method:org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:104)
+Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:11,347 method:org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:86)
+Processing injected element of bean &apos;com.tom.springjdbctest.StudentDAOTest&apos;: AutowiredMethodElement for public void org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests.setDataSource(javax.sql.DataSource)
+[DEBUG] 2017-07-16 13:14:11,348 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;dataSource&apos;
+[DEBUG] 2017-07-16 13:14:11,348 method:org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:86)
+Processing injected element of bean &apos;com.tom.springjdbctest.StudentDAOTest&apos;: AutowiredFieldElement for private com.tom.springjdbc.dao.StudentDAO com.tom.springjdbctest.StudentDAOTest.studentDAO
+[DEBUG] 2017-07-16 13:14:11,348 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;studentDAO&apos;
+[DEBUG] 2017-07-16 13:14:11,351 method:org.springframework.transaction.interceptor.AbstractFallbackTransactionAttributeSource.getTransactionAttribute(AbstractFallbackTransactionAttributeSource.java:108)
+Adding transactional method &apos;StudentDAOTest.testGet&apos; with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+[DEBUG] 2017-07-16 13:14:11,352 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:162)
+Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;] found for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@750e2b97, testMethod = testGet@StudentDAOTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,354 method:org.springframework.test.context.CacheAwareContextLoaderDelegate.loadContext(CacheAwareContextLoaderDelegate.java:104)
+Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]].
+[DEBUG] 2017-07-16 13:14:11,355 method:org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:248)
+Returning cached instance of singleton bean &apos;transactionManager&apos;
+[DEBUG] 2017-07-16 13:14:11,356 method:org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:367)
+Creating new transaction with name [testGet]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; &apos;&apos;
+[DEBUG] 2017-07-16 13:14:11,357 method:org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:142)
+Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost:3306/java]
+[DEBUG] 2017-07-16 13:14:11,380 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:206)
+Acquired Connection [com.mysql.jdbc.JDBC4Connection@f0c8a99] for JDBC transaction
+[DEBUG] 2017-07-16 13:14:11,381 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:223)
+Switching JDBC Connection [com.mysql.jdbc.JDBC4Connection@f0c8a99] to manual commit
+[DEBUG] 2017-07-16 13:14:11,382 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.isRollback(TransactionalTestExecutionListener.java:427)
+No method-level @Rollback override: using default rollback [true] for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@750e2b97, testMethod = testGet@StudentDAOTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[INFO ] 2017-07-16 13:14:11,382 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:279)
+Began transaction (4): transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@614ca7df]; rollback [true]
+[DEBUG] 2017-07-16 13:14:11,383 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Creating a new SqlSession
+[DEBUG] 2017-07-16 13:14:11,383 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740cae06]
+[DEBUG] 2017-07-16 13:14:11,383 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+JDBC Connection [com.mysql.jdbc.JDBC4Connection@f0c8a99] will be managed by Spring
+[DEBUG] 2017-07-16 13:14:11,384 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt;  Preparing: select * from student where id = ? 
+[DEBUG] 2017-07-16 13:14:11,385 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+==&gt; Parameters: 1(Long)
+[TRACE] 2017-07-16 13:14:11,401 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.trace(JakartaCommonsLoggingImpl.java:59)
+&lt;==    Columns: id, name, qq, type, enterDate, school, stId, link, word, TA, source, update_at, create_at
+[TRACE] 2017-07-16 13:14:11,402 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.trace(JakartaCommonsLoggingImpl.java:59)
+&lt;==        Row: 1, lian, null, null, null, xiada, null, null, null, null, null, 0, 0
+[DEBUG] 2017-07-16 13:14:11,407 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+&lt;==      Total: 1
+[DEBUG] 2017-07-16 13:14:11,408 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740cae06]
+[DEBUG] 2017-07-16 13:14:11,412 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.isRollback(TransactionalTestExecutionListener.java:427)
+No method-level @Rollback override: using default rollback [true] for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@750e2b97, testMethod = testGet@StudentDAOTest, testException = org.junit.ComparisonFailure: expected:&lt;id:1 name:[刘佳义 school:河北科技大学 qq:1060015371]&gt; but was:&lt;id:1 name:[lian school:xiada qq:null]&gt;, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,413 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740cae06]
+[DEBUG] 2017-07-16 13:14:11,414 method:org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl.debug(JakartaCommonsLoggingImpl.java:54)
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@740cae06]
+[DEBUG] 2017-07-16 13:14:11,414 method:org.springframework.transaction.support.AbstractPlatformTransactionManager.processRollback(AbstractPlatformTransactionManager.java:847)
+Initiating transaction rollback
+[DEBUG] 2017-07-16 13:14:11,415 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doRollback(DataSourceTransactionManager.java:284)
+Rolling back JDBC transaction on Connection [com.mysql.jdbc.JDBC4Connection@f0c8a99]
+[DEBUG] 2017-07-16 13:14:11,416 method:org.springframework.jdbc.datasource.DataSourceTransactionManager.doCleanupAfterCompletion(DataSourceTransactionManager.java:327)
+Releasing JDBC Connection [com.mysql.jdbc.JDBC4Connection@f0c8a99] after transaction
+[DEBUG] 2017-07-16 13:14:11,417 method:org.springframework.jdbc.datasource.DataSourceUtils.doReleaseConnection(DataSourceUtils.java:327)
+Returning JDBC Connection to DataSource
+[INFO ] 2017-07-16 13:14:11,417 method:org.springframework.test.context.transaction.TransactionalTestExecutionListener.endTransaction(TransactionalTestExecutionListener.java:299)
+Rolled back transaction after test execution for test context [TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@750e2b97, testMethod = testGet@StudentDAOTest, testException = org.junit.ComparisonFailure: expected:&lt;id:1 name:[刘佳义 school:河北科技大学 qq:1060015371]&gt; but was:&lt;id:1 name:[lian school:xiada qq:null]&gt;, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]
+[DEBUG] 2017-07-16 13:14:11,418 method:org.springframework.test.context.support.DirtiesContextTestExecutionListener.afterTestMethod(DirtiesContextTestExecutionListener.java:107)
+After test method: context [[TestContext@4590c9c3 testClass = StudentDAOTest, testInstance = com.tom.springjdbctest.StudentDAOTest@750e2b97, testMethod = testGet@StudentDAOTest, testException = org.junit.ComparisonFailure: expected:&lt;id:1 name:[刘佳义 school:河北科技大学 qq:1060015371]&gt; but was:&lt;id:1 name:[lian school:xiada qq:null]&gt;, mergedContextConfiguration = [MergedContextConfiguration@5056dfcb testClass = StudentDAOTest, locations = &apos;{classpath:spring-module.xml}&apos;, classes = &apos;{}&apos;, contextInitializerClasses = &apos;[]&apos;, activeProfiles = &apos;{}&apos;, contextLoader = &apos;org.springframework.test.context.support.DelegatingSmartContextLoader&apos;, parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+</system-out>
+  </testcase>
+</testsuite>

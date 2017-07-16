@@ -53,7 +53,7 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 	}
 	
 	@Test
-    @Transactional   //标明此方法需使用事务  
+    @Transactional   //标明此方法使用事务
 
 	public void testDelete() throws Exception  {
 		studentDAO.delStudent(6L);
