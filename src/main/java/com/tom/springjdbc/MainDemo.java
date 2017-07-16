@@ -9,14 +9,23 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.transaction.TransactionConfiguration;
 
 import com.tom.springjdbc.bean.Student;
 import com.tom.springjdbc.dao.StudentDAO;
 
+//@ContextConfiguration(locations = "spring-module.xml") 
+//@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false) 
 public class MainDemo {
+	
 	public static void main(String[] args) throws IOException {
+
+		
+		
 		/*
 		 * use mybatis
 		 */
@@ -30,8 +39,16 @@ public class MainDemo {
 		//StudentDAO studentDAO = (StudentDAO) context.getBean("studentDAO");
 		SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
 		SqlSession session = sqlSessionFactory.openSession();
+		
 		try {
 			StudentDAO studentDAO = session.getMapper(StudentDAO.class);
+			for(int i=0;i<1000;i++){
+				Student student = new Student();
+				student.setName("No."+i);
+				student.setSchool(""+i+"zhong");
+				studentDAO.addStudent(student);
+			}
+			/*
 			Student student1 = studentDAO.get(1L);
 			System.out.println(student1); 
 			Student student = new Student();
@@ -51,7 +68,7 @@ public class MainDemo {
 				System.out.println(iter.next());
 
 			}
-
+		*/
 			/*
 			 * Student student1= (Student)
 			 * session.selectOne("com.tom.springjdbc.dao.StudentDAO.get", 1L);
@@ -70,6 +87,7 @@ public class MainDemo {
 			 * 
 			 * }
 			 */
+		
 			session.commit();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
