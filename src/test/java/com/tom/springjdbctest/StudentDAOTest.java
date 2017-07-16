@@ -56,8 +56,8 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
     @Transactional   //标明此方法使用事务
 
 	public void testDelete() throws Exception  {
-		studentDAO.delStudent(6L);
-		Assert.assertEquals(null,studentDAO.get(6L));
+		studentDAO.delStudent(16L);
+		Assert.assertEquals(null,studentDAO.get(16L));
 	}
 	
 	@Test
@@ -65,10 +65,11 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 	public void testAdd() throws Exception{
 		Student student = new Student();
 		//student.setId(35L);
-		student.setName("lianlian");
+		student.setName("datian");
 		student.setSchool("xiada");
+		student.setQq("2333333");
 		studentDAO.addStudent(student);
-		Assert.assertEquals("lianlian",studentDAO.get(43L).getName());
+		Assert.assertEquals("datian",studentDAO.selectByQq("2333333").getName());
 	}
 	
 }

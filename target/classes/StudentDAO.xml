@@ -8,6 +8,10 @@
     select * from student where id = #{id}
   </select>
   
+   <select id="selectByQq" parameterType="string" resultType="com.tom.springjdbc.bean.Student">
+    select * from student where qq = #{qq}
+  </select>
+  
   <select id="query" resultType="com.tom.springjdbc.bean.Student">
   select *
   from student

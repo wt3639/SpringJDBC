@@ -11,9 +11,9 @@
        <!-- Using JDBC Driver: JTDS -->
        <property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
        <property name="url"
-           value="jdbc:mysql://localhost:3306/java" />
+           value="jdbc:mysql://45.78.29.7:3306/java" />
        <property name="username" value="root" />
-       <property name="password" value="root" />
+       <property name="password" value="wt123456" />
    </bean>
 
 </beans>
