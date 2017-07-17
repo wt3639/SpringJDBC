@@ -42,7 +42,7 @@ public class MainDemo {
 		
 		try {
 			StudentDAO studentDAO = session.getMapper(StudentDAO.class);
-			for(int i=0;i<1000;i++){
+			for(int i=0;i<1000000;i++){
 				Student student = new Student();
 				student.setName("No."+i);
 				student.setSchool(""+i+"zhong");
