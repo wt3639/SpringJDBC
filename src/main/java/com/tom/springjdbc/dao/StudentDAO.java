@@ -10,5 +10,7 @@ public interface StudentDAO {
 	public Student get(Long id) throws Exception;
 	public void delStudent(Long id) throws Exception;
     public List<Student> query() throws Exception ;
-    public Student selectByQq(String qq)throws Exception;
+    public Student selectByQq(String qq) throws Exception;
+    public Student selectByName(String name) throws Exception;
+    public Student selectByStId(String stId) throws Exception;
 }

@@ -22,7 +22,7 @@ import com.tom.springjdbc.dao.StudentDAO;
 //@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false) 
 public class MainDemo {
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 
 		
 		
@@ -91,6 +91,7 @@ public class MainDemo {
 			session.commit();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println("exception caught");
 			e.printStackTrace();
 		} finally {
 			session.close();

@@ -17,7 +17,7 @@ public class Student {
 	public long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -83,13 +83,13 @@ public class Student {
 	public long getUpdate_at() {
 		return update_at;
 	}
-	public void setUpdate_at(long update_at) {
+	public void setUpdate_at(Long update_at) {
 		this.update_at = update_at;
 	}
 	public long getCreate_at() {
 		return create_at;
 	}
-	public void setCreate_at(long create_at) {
+	public void setCreate_at(Long create_at) {
 		this.create_at = create_at;
 	}
 	@Override

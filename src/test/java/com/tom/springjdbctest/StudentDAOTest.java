@@ -72,4 +72,20 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 		Assert.assertEquals("datian",studentDAO.selectByQq("2333333").getName());
 	}
 	
+	@Test
+	@Transactional
+	public void testSelectByName() throws Exception{
+		
+		Student student =studentDAO.selectByName("No.7777");
+		Assert.assertEquals("7777zhong", student.getSchool());
+	}
+	
+	@Test
+	@Transactional
+	public void testSelectByStId() throws Exception{
+		
+		Student student =studentDAO.selectByStId("38");
+		Assert.assertEquals("¡ıº—“Â", student.getName());
+	}
+	
 }

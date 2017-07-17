@@ -12,6 +12,15 @@
     select * from student where qq = #{qq}
   </select>
   
+   <select id="selectByName" parameterType="string" resultType="com.tom.springjdbc.bean.Student">
+    select * from student where name = #{name}
+  </select>
+  
+   <select id="selectByStId" parameterType="string" resultType="com.tom.springjdbc.bean.Student">
+    select * from student where stId = #{stId}
+  </select>
+  
+  
   <select id="query" resultType="com.tom.springjdbc.bean.Student">
   select *
   from student
