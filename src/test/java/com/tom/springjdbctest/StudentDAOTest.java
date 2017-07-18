@@ -16,24 +16,18 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.tom.springjdbc.basetest.BaseTest;
 import com.tom.springjdbc.bean.Student;
 import com.tom.springjdbc.dao.StudentDAO;
 import com.tom.springjdbc.service.IStudentService;
 import com.tom.springjdbc.serviceimpl.StudentService;
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-module.xml") 
-@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)  
+
  
-public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTests{
+public class StudentDAOTest extends BaseTest{
 	
-	
-	private StudentService studentService = new StudentService(); 
-	/*
-	ApplicationContext context = new ClassPathXmlApplicationContext("spring-module.xml");				 
-	SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
-	SqlSession session = sqlSessionFactory.openSession();
-	StudentDAO studentDAO = session.getMapper(StudentDAO.class);
-	*/
+	@Autowired  
+	private StudentService studentService; 
+
 	@Test
 	 @Transactional    
 	 

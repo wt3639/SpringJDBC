@@ -1,21 +1,15 @@
 package com.tom.springjdbc.serviceimpl;
 
 import java.util.List;
-
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import com.tom.springjdbc.bean.Student;
 import com.tom.springjdbc.dao.StudentDAO;
+import com.tom.springjdbc.service.IStudentService;
 
-public class StudentService {
-	ApplicationContext context = new ClassPathXmlApplicationContext("spring-module.xml");				 
-	//StudentDAO studentDAO = (StudentDAO) context.getBean("studentDAO");
-	SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
-	SqlSession session = sqlSessionFactory.openSession();
-	StudentDAO studentDAO = session.getMapper(StudentDAO.class);
+public class StudentService implements IStudentService{
+	@Autowired  
+	StudentDAO studentDAO;
+	
 	public int addStudent(Student student) throws Exception{
 		
 		int result = studentDAO.addStudent(student);
