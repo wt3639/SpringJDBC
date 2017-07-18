@@ -1,15 +1,15 @@
-package com.tom.springjdbc.dao;
+package com.tom.springjdbc.service;
 
 import java.util.List;
 
 import com.tom.springjdbc.bean.Student;
 
-public interface StudentDAO {
+public interface IStudentService {
 	public int addStudent(Student student) throws Exception;
-	public int updateStudent(Student student) throws Exception;
-	public Student get(Long id) throws Exception;
-	public int delStudent(Long id) throws Exception;
-    public List<Student> query() throws Exception ;
+	public boolean updateStudent(Student student) throws Exception;
+	public Student selectById(Long id) throws Exception;
+	public boolean delStudent(Long id) throws Exception;
+    public List<Student> selectAll() throws Exception ;
     public Student selectByQq(String qq) throws Exception;
     public Student selectByName(String name) throws Exception;
     public Student selectByStId(String stId) throws Exception;

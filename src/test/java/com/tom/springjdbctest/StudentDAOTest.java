@@ -18,14 +18,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.tom.springjdbc.bean.Student;
 import com.tom.springjdbc.dao.StudentDAO;
+import com.tom.springjdbc.service.IStudentService;
+import com.tom.springjdbc.serviceimpl.StudentService;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring-module.xml") 
 @TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true)  
  
 public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTests{
 	
-	@Autowired  
-	private StudentDAO studentDAO; 
+	
+	private StudentService studentService = new StudentService(); 
 	/*
 	ApplicationContext context = new ClassPathXmlApplicationContext("spring-module.xml");				 
 	SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
@@ -36,7 +38,7 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 	 @Transactional    
 	 
 	public void testGet() throws Exception {
-		Student student1 = studentDAO.get(1L);
+		Student student1 = studentService.selectById(1L);
 		Assert.assertEquals("id:1 name:刘佳义 school:河北科技大学 qq:1060015371",student1.toString()); 
 		
 	}
@@ -47,17 +49,16 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 		Student student2 = new Student();
 		student2.setId(6L);
 		student2.setName("Wo");
-		studentDAO.updateStudent(student2);
-		Student student3 = studentDAO.get(6L);
-		Assert.assertEquals("Wo",student3.getName());
+		boolean result = studentService.updateStudent(student2);
+		Assert.assertEquals(true,result);
 	}
 	
 	@Test
     @Transactional   //标明此方法使用事务
 
 	public void testDelete() throws Exception  {
-		studentDAO.delStudent(16L);
-		Assert.assertEquals(null,studentDAO.get(16L));
+		boolean result =studentService.delStudent(16L);
+		Assert.assertEquals(true,result);
 	}
 	
 	@Test
@@ -68,15 +69,15 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 		student.setName("datian");
 		student.setSchool("xiada");
 		student.setQq("2333333");
-		studentDAO.addStudent(student);
-		Assert.assertEquals("datian",studentDAO.selectByQq("2333333").getName());
+		studentService.addStudent(student);
+		Assert.assertEquals("datian",studentService.selectByQq("2333333").getName());
 	}
 	
 	@Test
 	@Transactional
 	public void testSelectByName() throws Exception{
 		
-		Student student =studentDAO.selectByName("No.7777");
+		Student student =studentService.selectByName("No.7777");
 		Assert.assertEquals("7777zhong", student.getSchool());
 	}
 	
@@ -84,7 +85,7 @@ public class StudentDAOTest extends AbstractTransactionalJUnit4SpringContextTest
 	@Transactional
 	public void testSelectByStId() throws Exception{
 		
-		Student student =studentDAO.selectByStId("38");
+		Student student =studentService.selectByStId("38");
 		Assert.assertEquals("刘佳义", student.getName());
 	}
 	

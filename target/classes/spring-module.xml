@@ -8,6 +8,8 @@
   <!--   <import resource="dao/spring-student.xml" />-->
    <import resource="spring-mybatis.xml" />
    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
-   
+    <bean id="studentService" class="com.tom.springjdbc.serviceimpl.StudentService">
+     
+    </bean> 
    
 </beans>
