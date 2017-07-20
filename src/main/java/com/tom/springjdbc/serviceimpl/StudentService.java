@@ -17,11 +17,15 @@ public class StudentService implements IStudentService{
 	
 	   
 	public int addStudent(Student student) throws Exception{
+		//Long time = new Date().getTime();
+		//student.setCreate_at(time);
+		//student.setUpdate_at(time);
 		int result = studentDAO.addStudent(student);
 		return result;
 	}
 	 
 	public boolean updateStudent(Student student) throws Exception{
+		//student.setUpdate_at(new Date().getTime());
 		int result = studentDAO.updateStudent(student);
 		if(result>0)
 			return true;
