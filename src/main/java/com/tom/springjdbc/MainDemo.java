@@ -2,6 +2,9 @@ package com.tom.springjdbc;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,10 +20,13 @@ import org.springframework.test.context.transaction.TransactionConfiguration;
 
 import com.tom.springjdbc.bean.Student;
 import com.tom.springjdbc.dao.StudentDAO;
+import com.tom.springjdbc.serviceimpl.StudentService;
 
 //@ContextConfiguration(locations = "spring-module.xml") 
 //@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = false) 
 public class MainDemo {
+	@Autowired
+	StudentService studentService;
 	
 	public static void main(String[] args) {
 
@@ -35,19 +41,28 @@ public class MainDemo {
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession session = sqlSessionFactory.openSession();
 		*/
+		
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-module.xml");				 
 		//StudentDAO studentDAO = (StudentDAO) context.getBean("studentDAO");
-		SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
-		SqlSession session = sqlSessionFactory.openSession();
-		
+		StudentService studentDAO = (StudentService) context.getBean("studentService");
+		//SqlSessionFactory sqlSessionFactory = (SqlSessionFactory) context.getBean("sqlSessionFactory");
+		//SqlSession session = sqlSessionFactory.openSession();
+		//StudentService studentDAO = session.getMapper(StudentService.class);
 		try {
-			StudentDAO studentDAO = session.getMapper(StudentDAO.class);
-			for(int i=0;i<1000000;i++){
+			/*
+			for(int i=0;i<100;i++){
 				Student student = new Student();
 				student.setName("No."+i);
 				student.setSchool(""+i+"zhong");
 				studentDAO.addStudent(student);
-			}
+			}*/
+			/*
+			Student student2 = studentDAO.selectByName("No.22");
+			student2.setName("Wo");
+			boolean result = studentDAO.updateStudent(student2);
+			*/
+			Date date = new Date(studentDAO.selectByName("Wo").getUpdate_at());
+			System.out.println(date);
 			/*
 			Student student1 = studentDAO.get(1L);
 			System.out.println(student1); 
@@ -88,13 +103,13 @@ public class MainDemo {
 			 * }
 			 */
 		
-			session.commit();
+		//	session.commit();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("exception caught");
 			e.printStackTrace();
 		} finally {
-			session.close();
+			//session.close();
 		}
 
 		/*

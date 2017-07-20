@@ -22,17 +22,18 @@ import com.tom.springjdbc.dao.StudentDAO;
 import com.tom.springjdbc.service.IStudentService;
 import com.tom.springjdbc.serviceimpl.StudentService;
 
+
  
 public class StudentDAOTest extends BaseTest{
 	
 	@Autowired  
-	private StudentService studentService; 
+	private StudentDAO studentDAO; 
 
 	@Test
 	 @Transactional    
 	 
 	public void testGet() throws Exception {
-		Student student1 = studentService.selectById(1L);
+		Student student1 = studentDAO.get(1L);
 		Assert.assertEquals("id:1 name:刘佳义 school:河北科技大学 qq:1060015371",student1.toString()); 
 		
 	}
@@ -43,16 +44,17 @@ public class StudentDAOTest extends BaseTest{
 		Student student2 = new Student();
 		student2.setId(6L);
 		student2.setName("Wo");
-		boolean result = studentService.updateStudent(student2);
-		Assert.assertEquals(true,result);
+		studentDAO.updateStudent(student2);
+		Student student3 = studentDAO.get(6L);
+		Assert.assertEquals("Wo",student3.getName());
 	}
 	
 	@Test
     @Transactional   //标明此方法使用事务
 
 	public void testDelete() throws Exception  {
-		boolean result =studentService.delStudent(16L);
-		Assert.assertEquals(true,result);
+		studentDAO.delStudent(16L);
+		Assert.assertEquals(null,studentDAO.get(16L));
 	}
 	
 	@Test
@@ -63,15 +65,15 @@ public class StudentDAOTest extends BaseTest{
 		student.setName("datian");
 		student.setSchool("xiada");
 		student.setQq("2333333");
-		studentService.addStudent(student);
-		Assert.assertEquals("datian",studentService.selectByQq("2333333").getName());
+		studentDAO.addStudent(student);
+		Assert.assertEquals("datian",studentDAO.selectByQq("2333333").getName());
 	}
 	
 	@Test
 	@Transactional
 	public void testSelectByName() throws Exception{
 		
-		Student student =studentService.selectByName("No.7777");
+		Student student =studentDAO.selectByName("No.7777");
 		Assert.assertEquals("7777zhong", student.getSchool());
 	}
 	
@@ -79,7 +81,7 @@ public class StudentDAOTest extends BaseTest{
 	@Transactional
 	public void testSelectByStId() throws Exception{
 		
-		Student student =studentService.selectByStId("38");
+		Student student =studentDAO.selectByStId("38");
 		Assert.assertEquals("刘佳义", student.getName());
 	}
 	

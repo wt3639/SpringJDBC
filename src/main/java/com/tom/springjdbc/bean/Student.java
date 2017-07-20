@@ -1,7 +1,7 @@
 package com.tom.springjdbc.bean;
 
 public class Student {
-	private long id;
+	private Long id;
 	private String name;
 	private String qq;
 	private String type;
@@ -12,9 +12,9 @@ public class Student {
 	private String word;
 	private String tA;
 	private String source;
-	private long update_at;
-	private long create_at;
-	public long getId() {
+	private Long update_at;
+	private Long create_at;
+	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
@@ -80,13 +80,13 @@ public class Student {
 	public void setSource(String source) {
 		this.source = source;
 	}
-	public long getUpdate_at() {
+	public Long getUpdate_at() {
 		return update_at;
 	}
 	public void setUpdate_at(Long update_at) {
 		this.update_at = update_at;
 	}
-	public long getCreate_at() {
+	public Long getCreate_at() {
 		return create_at;
 	}
 	public void setCreate_at(Long create_at) {

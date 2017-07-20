@@ -29,7 +29,7 @@
   <insert id="addStudent" parameterType="com.tom.springjdbc.bean.Student" useGeneratedKeys="true" keyProperty="id">
   insert into student (name,qq,type,enterDate,school,stId,link,word,TA,source,update_at,create_at) 
   values(#{name},#{qq},#{type},#{enterDate},#{school},#{stId},#{link},
-  #{word},#{tA},#{source},#{update_at},#{create_at})
+  #{word},#{tA},#{source},unix_timestamp(now()),unix_timestamp(now()))
 </insert>
 
 <update id="updateStudent" parameterType="com.tom.springjdbc.bean.Student">
@@ -44,7 +44,7 @@
     word=#{word},
     TA=#{tA},
     source=#{source},
-    update_at=#{update_at},
+    update_at=unix_timestamp(now()),
     create_at=#{create_at}
   where id = #{id}
 </update>
