@@ -73,8 +73,8 @@ public class StudentDAOTest extends BaseTest{
 	@Transactional
 	public void testSelectByName() throws Exception{
 		
-		Student student =studentDAO.selectByName("No.7777");
-		Assert.assertEquals("7777zhong", student.getSchool());
+		Student student =studentDAO.selectByName("No.11");
+		Assert.assertEquals("11zhong", student.getSchool());
 	}
 	
 	@Test

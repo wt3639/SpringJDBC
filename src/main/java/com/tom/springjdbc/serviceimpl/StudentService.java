@@ -1,6 +1,5 @@
 package com.tom.springjdbc.serviceimpl;
 
-import java.util.Date;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,13 +31,13 @@ public class StudentService implements IStudentService{
 		else 
 			return false;
 	}
-	 @Transactional  
+	
 	public Student selectById(Long id) throws Exception{
 		Student st = studentDAO.get(id);
 		return st;
 				
 	}
-	 @Transactional  
+	 
 	public boolean delStudent(Long id) throws Exception{
 		int result = studentDAO.delStudent(id);
 		if(result>0)
